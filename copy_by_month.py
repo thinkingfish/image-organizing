@@ -44,7 +44,7 @@ def organize_image(source, target):
   for dirpath, subdirs, filenames in os.walk(source):
     for filename in filenames:
       if (file_visited % REPORT_EVERY == 0):
-        print("...processed {} out of {} files ({} images copied)".format(file_visited, total_file, image_copied))
+        print("...processed {} out of {} files ({} copied)".format(file_visited, total_file, image_copied))
       file_visited += 1
       source_file = os.path.join(dirpath, filename)
       # get metadata, compute target path, and copy
